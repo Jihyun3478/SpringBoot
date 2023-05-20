@@ -39,8 +39,7 @@ public class CheckedTest {
 
         /*
          * 예외를 잡아서 처리하는 코드
-         */
-        public void callCatch() {
+         */        public void callCatch() {
             try {
                 repository.call();
             } catch (MyCheckedException e) {
