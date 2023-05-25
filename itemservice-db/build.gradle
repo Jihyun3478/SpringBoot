@@ -21,14 +21,22 @@ repositories {
 }
 
 dependencies {
-	//JdbcTemplate 추가
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	//MyBatis 추가
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
-	//H2 데이터베이스 추가
-	runtimeOnly 'com.h2database:h2'
+	/* 웹 */
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	/* 웹 */
+	//JdbcTemplate 추가
+    //implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//MyBatis 추가
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	//JPA, 스프링 데이터 JPA 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	/* DB */
+	//H2 데이터베이스 추가
+	runtimeOnly 'com.h2database:h2'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
