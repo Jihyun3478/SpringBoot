@@ -21,24 +21,12 @@ class ItemRepositoryTest {
     @Autowired
     ItemRepository itemRepository;
 
-//    @Autowired
-//    PlatformTransactionManager transactionManager;
-//    TransactionStatus status;
-//
-//    @BeforeEach
-//    void beforeEach() {
-//        // 트랜잭션 시작{
-//        status = transactionManager.getTransaction(new DefaultTransactionDefinition());
-//    }
-
     @AfterEach
     void afterEach() {
         //MemoryItemRepository 의 경우 제한적으로 사용
         if (itemRepository instanceof MemoryItemRepository) {
             ((MemoryItemRepository) itemRepository).clearStore();
         }
-        // 트랜잭션 롤백
-//        transactionManager.rollback(status);
     }
 
     @Test
@@ -90,7 +78,7 @@ class ItemRepositoryTest {
         //itemName 검증
         test("itemA", null, item1, item2);
         test("temA", null, item1, item2);
-        test("itemB", null, item1, item3);
+        test("itemB", null, item3);
 
         //maxPrice 검증
         test(null, 10000, item1);
