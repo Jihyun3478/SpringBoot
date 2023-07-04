@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-//import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class ItemRepositoryTest {
     ItemRepository itemRepository = new ItemRepository();
