@@ -22,12 +22,12 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody
+    @ResponseBody // 데이터를 그대로 넘김
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name;
     }
 
-    @GetMapping("hello-api")
+    @GetMapping("hello-api") // 객체 반환
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
