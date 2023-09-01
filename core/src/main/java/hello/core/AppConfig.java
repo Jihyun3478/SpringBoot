@@ -7,8 +7,9 @@ import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
 
+// 공연기획자
 public class AppConfig {
-    public MemberService memberService() { // AppConfig를 통해 공연 기확자를 따로 만들어 배우를 섭외
+    public MemberService memberService() { // AppConfig를 통해 구현체(배우) 의존관계 주입
         return new MemberServiceImpl(new MemoryMemberRepository());
     }
 
