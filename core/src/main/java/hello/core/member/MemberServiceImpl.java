@@ -1,5 +1,6 @@
 package hello.core.member;
 
+// 회원 서비스 구현체
 public class MemberServiceImpl implements MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository(); // 배우가 배우를 직접 섭외함

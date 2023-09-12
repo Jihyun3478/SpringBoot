@@ -3,6 +3,7 @@ package hello.core;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
+import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 공연기획자
-@Configuration // AppConfig에 설정은 구성한다는 뜻
+//@Configuration // AppConfig에 설정을 구성한다는 뜻
 public class AppConfig {
     // @Bean memberService -> new MemoryMemberRepository()
     // @Bean orderService -> new MemoryMemberRepository()
@@ -34,7 +35,7 @@ public class AppConfig {
     }
 
     @Bean
-    public MemoryMemberRepository memberRepository() { // static 메서드로 설정 시 싱글톤 보장 X
+    public MemberRepository memberRepository() { // static 메서드로 설정 시 싱글톤 보장 X
         System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
