@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 공연기획자
-//@Configuration // AppConfig에 설정을 구성한다는 뜻
+@Configuration // AppConfig에 설정을 구성한다는 뜻
 public class AppConfig {
     // @Bean memberService -> new MemoryMemberRepository()
     // @Bean orderService -> new MemoryMemberRepository()
